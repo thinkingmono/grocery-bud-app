@@ -1,11 +1,11 @@
 import SingleItem from "./SingleItem";
 
-const Items = ({ items, removeItem }) => {
+const Items = ({ items, removeItem, editItem }) => {
     return (
         <section className="items">
             {items && items.map((item) => {
                 const { id } = item;
-                return <SingleItem key={id} item={item} removeItem={removeItem}/>
+                return <SingleItem key={id} item={item} editItem={editItem} removeItem={removeItem}/>
             })}
         </section>
     )
